@@ -6,6 +6,7 @@
 
 from typing import List
 
+
 def reverse_lookup_lists(phone_num: str, phone_numbers: List[str],
                          names: List[str]) -> str:
     """This function receives a phone number phone_num, and two lists: a list
@@ -24,3 +25,23 @@ def reverse_lookup_lists(phone_num: str, phone_numbers: List[str],
         'Louis Riel', 'Canoe Head', 'Tim Horton'])
     'Canoe Head'
     """
+    flag = False
+    for phone in phone_numbers:
+        if phone == phone_num:
+            flag = True
+            name_index = phone_numbers.index(phone)
+            break
+        else:
+            flag = False
+            continue
+
+    if flag:
+        return names[name_index]
+    else:
+        return ""
+
+
+if __name__ == "__main__":
+    print(reverse_lookup_lists('416-555-6543', ['416-555-3498', \
+        '647-555-9812', '416-555-6543', '905-555-6681'], ['John A. Macdonald', \
+        'Louis Riel', 'Canoe Head', 'Tim Horton']))
