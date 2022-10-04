@@ -29,7 +29,7 @@ def collatz_template():
             n = n * 3 + 1
         steps.append(n)
 
-    return render_template("collatz.html",n=original,steps=steps)
+    return render_template("collatz.html", n=original, steps=steps)
 
 
 @webapp.route('/collatz_form_template',methods=['GET'])

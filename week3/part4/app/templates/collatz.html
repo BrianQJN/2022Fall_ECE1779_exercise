@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
     {{n}}
+    <p></p>
     {% for s in steps %}
         
-        <!-- your code starts here --> 
-
+        <!-- your code starts here -->
+        {{s}}
+        {% if s != 1 %}
+            ->
+        {% endif %}
         <!-- your code ends here --> 
 
     {% endfor %}
