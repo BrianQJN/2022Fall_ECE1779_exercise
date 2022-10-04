@@ -6,7 +6,6 @@ from flask import render_template, request
 from app import webapp
 
 
-
 @webapp.route('/collatz')
 def collatz():
     """
@@ -16,7 +15,8 @@ def collatz():
     """
 
     # Your code from Part2 here.
-    
+    original = request.args.get("n")
+    n = int(original)
     # End of your code.
     
     steps = []
@@ -43,5 +43,5 @@ def collatz():
         </html>
     """
 
-    return html.format(original,series,len(steps))
+    return html.format(original, series, len(steps))
 
