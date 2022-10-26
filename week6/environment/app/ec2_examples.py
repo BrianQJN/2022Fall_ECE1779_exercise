@@ -42,7 +42,7 @@ def ec2_list():
             Filters=[
                 {
                     'Name': 'instance-state-name',
-                    'Values': ['pending', 'running', 'shutting-down', 'terminated', 'stopping', 'stopped']
+                    'Values': [status]
                 }
             ]
         )
