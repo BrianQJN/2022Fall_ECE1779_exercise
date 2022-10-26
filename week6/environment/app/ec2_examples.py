@@ -36,9 +36,18 @@ def ec2_list():
     else:  # status := pending | running | shutting-down | terminated | stopping | stopped
 
         ########### your code starts here  ################
-
         instances = []
-
+        instance_iterator = ec2.instances.filter(
+            Filters=[
+                {
+                    'Name': 'instance-state-name',
+                    'Values': ['pending', 'running', 'shutting-down', 'terminated', 'stopping', 'stopped']
+                }
+            ]
+        )
+        for instance in instance_iterator:
+            instances.append(instance)
+        print(instances)
         ########### your code ends here    ################
 
     return render_template("ec2_examples/list.html", title="EC2 Instances", instances=instances)
