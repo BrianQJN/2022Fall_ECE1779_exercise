@@ -32,8 +32,7 @@ def ec2_list():
     ec2 = boto3.resource('ec2')
 
     if status == "" or status == "all":
-        # instances = ec2.instances.all()
-        instances = []
+        instances = ec2.instances.all()
     else:  # status := pending | running | shutting-down | terminated | stopping | stopped
 
         ########### your code starts here  ################
