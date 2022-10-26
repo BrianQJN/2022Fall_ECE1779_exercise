@@ -1,5 +1,5 @@
 # Update the path below.
-file = '~/.aws/credentials'
+file = '/home/ubuntu/.aws/credentials'
 
 # Update keys below.
 AWS_ACCESS_KEY_ID = 'AKIA56I62COEQW5DLOU7'
@@ -14,7 +14,7 @@ aws_secret_access_key={AWS_SECRET_KEY}
     filetowrite.write(myCredential)
 
 # Update the path below.
-file = '~/.aws/config'
+file = '/home/ubuntu/.aws/config'
 
 with open(file, 'w') as filetowrite:
     myCredential = """[default]
