@@ -2,8 +2,8 @@
 file = '/home/ubuntu/.aws/credentials'
 
 # Update keys below.
-AWS_ACCESS_KEY_ID = 'AKIA56I62COEQW5DLOU7'
-AWS_SECRET_KEY = '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'
+AWS_ACCESS_KEY_ID = 
+AWS_SECRET_KEY = 
 
 
 with open(file, 'w') as filetowrite:
